@@ -1,0 +1,288 @@
+<html>
+<head>
+
+<title>Flashtool - Xperia devices flashing</title>
+<meta name="description" content="Flashtool is a software to flash Xperia devices">
+<meta name="keywords" content="Flashtool">
+<link type="text/css" rel="StyleSheet" href="common/tab.css" />
+<script type="text/javascript" src="common/tabpane.js"></script>
+<script>
+	function hidePl() {
+		document.getElementById('movie').style.visibility='hidden';
+	}
+	function showPl() {
+		document.getElementById('movie').style.visibility='visible';
+	}
+</script>
+</head>
+<body style="background:ThreeDFace" class="readme">
+<a name="top"></a>
+<table border=0 cellpadding=0 cellspacing=3 width=600>
+	<tr>
+		<td valign=top rowspan=2>
+		<h1>Flashtool v0.6.6.0</h1>
+		&copy;2011 by Androxyde<br><br>
+		<a href="http://hotfile.com/register.html?reff=5349854" target="_new">Register hotlink account</a>
+		</td>
+	</tr>
+</table><br>
+<div class="tab-pane" >
+<div class="tab-page"><h2 class="tab">Introduction</h2>
+ <table border="0" cellpadding="0" cellspacing="3" width="100%">
+ <tr><th>Introduction to Flashtool</th></tr>
+ <tr><td>
+   Flashtool is a flashing software that can be used to : 
+   <ol>
+	<li>Flash original Images (Android 1.6, 2.1, 2.3 Images)
+    <li>Root your phone
+    <li>Install Recovery, Busybox, custom kernels
+    <li>Clean your Rom (remove /system/apps apps of your choice) (Be careful, unless you really know what you do, do not modify the default list. This can make your phone stuck at the SE Logo)
+    <li>Clear dalvik cache
+    <li>Optimize (install of JIT v2) (Disabled in 0.4, will readd it as a plugin for 2.1 phones only)
+    <li>Customize (installs apps found in the custom/apps folder of the flashtool)
+    <li>Clean uninstalled (remove any references to system apps removed in the Clean (root needed) step)
+    <li>Edit any text file on the device
+    <li>Rebrand your device
+   </li>
+   </ol>
+ </td></tr>
+ <tr><th>Screenshot</th></tr>
+ <td><img src="common/sshot1.png"/></td>
+ </tr>
+ </tr></td>
+ </table></div>
+<div class="tab-page"><h2 class="tab">Installation</h2>
+  <table border="0" cellpadding="0" cellspacing="3" width="100%">
+		<tr><th>Requirements</th></tr>
+		<tr><td>
+		<dl>
+		    <dt>Full install :
+		    <dt><a href="http://hotfile.com/dl/140680461/a0cd7df/Flashtool-0.6.6-windows.exe.html" target="_new">Flashtool 0.6.6 Full Widnows Edition</a>
+		    <dt><a href="http://hotfile.com/dl/140700712/e161ebd/Flashtool-0.6.6.0.tar.gz.html" target="_new">Flashtool 0.6.6 Full Linux Edition</a>
+		</dl>
+		</td></tr>
+		<tr><th>Installation of Flashtool</th></tr>
+		<tr><td>
+To install the Flashtool, follow the steps below:
+<ol> Windows version :
+	<li>Install the full install Flashtool 0.6.5.0 package<br>
+	<li>Apply the latest update (each update is cumulative)<br>
+	Updates will not install if full 0.6.5.0 is not installed<br>
+</ol>
+<ol> Linux version :
+    <li>Unpack the tar.7z package<br>
+    <li>Check that libusb-1.0 is installed. On 64bits system, both 64bit and 32bit should be installed.<br>
+    <li>Add these rules to /etc/udev : <br>
+        SUBSYSTEM=="usb", ACTION=="add", SYSFS{idVendor}=="0fce", SYSFS{idProduct}=="*", MODE="0777"<br>
+</ol>
+		</td></tr>
+		</table>
+    <table border="0" cellpadding="0" cellspacing="3" width="100%">
+    <tr><th>Previous versions</th></tr>
+        <tr><td>
+        <dl>
+            <dt>0.6 release :
+            <dt><a href="http://hotfile.com/dl/139960034/2100f0e/Flashtool-0.6.5-windows.exe.html" target="_new">Flashtool 0.6.5 Full Widnows Edition</a>
+            <dt><a href="http://hotfile.com/dl/139965507/81744d2/Flashtool-0.6.5-linux.tar.7z.html" target="_new">Flashtool 0.6.5 Full Linux Edition</a>
+            <dt><a href="http://hotfile.com/dl/139778870/1873030/Flashtool-0.6.4-windows.exe.html" target="_new">Flashtool 0.6.4 Full Widnows Edition</a>
+            <dt><a href="http://hotfile.com/dl/139596510/916a091/FlashTool-0.6.3-linux.tar.7z.html" target="_new">Flashtool 0.6.3 Full Linux Edition</a>
+            <dt><br><br>0.5 release :
+            <dt><a href="http://hotfile.com/dl/139651124/bd8edf3/Flashtool-0.5.0.0beta-setup.exe.html" target="_new">Flashtool 0.5.0 Full Widnows Edition</a>
+            <dt><a href="http://hotfile.com/dl/139651782/e2bdcc6/Flashtool-0.5.3.0-update.exe.html" target="_new">Flashtool 0.5.3 Update Windows Edition</a>
+            <dt><br><br>0.2 release :
+            <dt><a href="http://hotfile.com/dl/139866304/94a2481/Flashtool-0.2.9.1-windows.exe.html" target="_new">Flashtool 0.2.9.1 Full Widnows Edition</a>
+
+        </dl>
+        </td></tr>
+    </table>
+	</div>
+	<div class="tab-page">
+		<h2 class="tab">FAQ</h2>
+		<table border=0 cellpadding=0 cellspacing=3 width=100%>
+		<tr><th>Frequently Asked Questions</th></tr>
+		<tr><td>
+The FAQ section is constantly growing - depending on what kind of feedback
+and questions I get from people using Flashtool.
+<blockquote>
+<dl>
+<dt>Troubleshooting<dd>
+	<a href="#faq1">I run flashtool and it says debug mode is off while it is on when I plug my device - what can I do ?</a><br>
+	<a href="#faq2">You say there is a Bootloader Unlock plugin but I can't see it in the plugin menu. Why ?</a><br>
+</dl>
+<dl>
+<dt>Using Flashtool<dd>
+    <a href="#use1">My device is not recognized. Does it mean Flashtool is not compatible with my device ?</a><br>
+</dl>
+</blockquote>
+</td></tr>
+<tr><th class="th1">Troubleshooting</th></tr>
+<tr><td>
+<p><span style="float:right"><a href="#top">Back to Top</a></span><a name="faq1"><em>I run flashtool and it says debug mode is off while it is on when I plug my device - what can I do ?</em></a>
+<p>On 2011 line devices, you have to be in MSC mode instead of MTP mode. Here is how to switch to MSC mode :
+<table>
+<tr>
+<td><img src="common/msc1.png"/></td>
+<td><img src="common/msc2.png"/></td>
+<td><img src="common/msc3.png"/></td>
+<td><img src="common/msc4.png"/></td>
+</tr>
+</table>
+</td></tr>
+<tr><td>
+<p><span style="float:right"><a href="#top">Back to Top</a></span><a name="faq2"><em>You say there is a Bootloader Unlock plugin but I can't see it in the plugin menu. Why ?</em></a>
+<p>Plugins will appear in the plugin menu if and only if all plugin requirements are met.
+<br>Here are requirements for BL Unlock plugin :
+<li>kernelversions=2.6.29,2.6.29-00054-g5f01537
+<li>androidversions=2.1,2.2,2.3
+<li>needroot=true
+<li>compatibledevices=X10,E10,E15,U20
+<p> If at least one of these criteria is not met, plugin will not be added to the Plugins menu
+<P>
+</td></tr>
+<tr><th class="th1">Using Flashtool</th></tr>
+<tr><td>
+<p><span style="float:right"><a href="#top">Back to Top</a></span><a name="use1"><em>My device is not recognized. Does it mean Flashtool is not compatible with my device ?</em></a>
+<p>Well, the flash button will ALWAYS be available. If your device is not recognized, Flashing will be the only feature available.
+<br>It means you can flash FTF bundles made for your device and upgrade / downgrade your device.
+</td></tr>
+<table>
+<tr>
+</table>
+	</div>
+	<div class="tab-page">
+		<h2 class="tab">Release Notes</h2>
+		<table border=0 cellpadding=0 cellspacing=3 width=100%>
+		<tr><th>Known bugs / Limitations</th></tr>
+		<tr><td>
+		</td></tr>
+		<tr><th>Flashtool Release Notes</th></tr>
+		<tr><td>
+<pre>
+<hr>
+* 0.6.6.0:
+- Some improvements in device mode detection.
+- Fixed an issue with cleaner feature (check if all files are there before beginning).
+- Added DoomKernel v06 and v06-1113 to kernel installer for X10.
+- Prepared for x64 native version under windows. (not working at the moment).
+
+* 0.6.5.0:
+- Fixed a bug when waiting for device in unlock bootloader feature.
+
+* 0.6.4.0:
+- Added drag&drop for ftf bundles.
+- Windows and linux version edition (no more use of SE code and DLL)
+- Added DoomKernel v06 for X10 owners
+- Added Bootloader relock for X10 owners
+
+* 0.5.3.0:
+- Corrected an issuee where some X10 Mini Pro devices are not recognized (and maybe others)
+
+* 0.5.2.0:
+- Corrected issue where flashtool refused to close when using fastboot (hopefully)
+- You can now have spaces in path to flashtool (can be installed in program files)
+- Optimized device recognition
+- Optimized Flashtool exit (there were some lags)
+- Updated Superuser to 3.0.7 and su to 3.0.3
+- Updated CWM5 to 5.2.0.7 for X10
+
+* 0.5.1.0:
+- Corrected an issue where devices are not recognized in the right mode
+
+* 0.5.0.0:
+- Added BL unlock for E10,E15,U20
+- Added E10,E15,U20 to list of devices
+- Added a Fastboot Toolbox (thanks DooMLoRD)
+- More accurate phone connection/disconnection detection as well as connection mode
+
+* 0.4.2.0:
+- Added BL unlock for X10
+- Small fixes for plugin API
+- Device recognition for all 2011 xperia line
+
+* 0.4.1.0:
+- Added drivers for 2011 line of xperia phones
+- When rooting device, it did not reboot at end of process.
+- su perms were not set the same way as Superuser do when it updates su binary
+- Corrected a small issue on ARC where phone was not detected after applying part1 of root exploit.
+- When installing recovery, the first install sets the installed version as default one.
+  It was not the case, causing pressing back key at boot not entering recovery as no default one was found.
+
+* 0.4.0.0:
+- Added zergRush root exploit for 2.3 FW
+- Added a toolbar instead of buttons. Icons can be changed from x10flasher_lib/x10flasher-res.jar
+  if you don't like default ones :-)
+- Updated Superuser.apk and su to the latest version.
+- X10 BL unlock will come later as a plugin. Plugin system almost ready
+
+* 0.3.0.0:
+- Rebrand feature added
+- Build.prop editor has become a generic text file editor
+- busybox installation can handle multiple versions
+- recovery installation can handle multiple versions
+- kernel installation can handle multiple versions
+- when flashing, system.sin can be excluded to flash only BB related files from a complete FTF bundle
+- Updated ADB drivers for 2.3.3 devices
+- Updated Superuser.apk and su to the latest version.
+- To apply aZuZu root method, after having flashed kernel downgrade, go to Advanced->root->force psneuter.
+  aZuZu ftf files included in the flashtool package.
+
+* 0.2.9.1:
+- Better chargemon support for all ROMS
+- Busybox upgraded to 1.17.2 (taken from superoneclick 1.7)
+- Developper feature : install and reboot custom kernels 
+  (doesn't work as custom kernels do not work yet. Just developper feature)
+
+* 0.2.9:
+- Recovery updated to FreeXperia recovery from J's CM7rc2
+- Recovery and Busybox installation should work on Custom Roms
+- Busybox is searched in /system/xbin now (J's CM7rc2 changes)
+- Recovery is installed in /system/recovery (as J's CM7rc2)
+- This version should recognize xperia ARC
+- This version should be able to flash SE decrypted firmwares for xperia ARC ? (need some testers)
+- This version may root xperia ARC ? (need some testers)
+- This version may install busybox on xperia ARC ? (need some testers)
+- This version may install xrecovery on xperia ARC ? (need some testers)
+
+* 0.2.8:
+[New] The device is autodetected by the flashtool at plug / unplug
+[New] If you install xRecovery from flashtool, you can reboot into recovery from flashtool too (Advanced menu)
+[New] You can now backup all /system/app content (Advanced menu)
+[New] You can translate all parts of the Graphical Interface (look in x10flasher_lib/langs for samples)
+[Upd] Firmware screen selection offers the ability to change the folder source containing ftf files.
+[Upd] Clean task now has a notion of profile that can be imported/exported for sharing
+[Upd] Customize is now APK Installer. This screen has the ability to choose the folder where apk files are
+[Upd] Optimize should work for any device (X10, X10mini/pro, X8)
+[Upd] xRecovery should work for any device (X10, X10mini/pro, X8)
+[Bug] Flashing should not anymore hang if flash goes wrong. An error should be thrown and flash aborted
+
+* 0.2.6:
+[Upd] Flashing 1.6 firmwares could lead to a FC with Timescape. 1.6 bundles must have the preset.ta file
+      if this one exists. otherwise the flash will be uncomplete.
+[Upd] Updated the "turn to flashmode" wait box. (thanks to rendeiro2005 for the animated gif)
+[Upd] Updated to xRecovery 0.3
+[Upd] Decryption now opens the bundle creation when complete.
+[Bug] Correction of a bug under certain scenario with ROM cleaner (when switching firmware version)
+
+* 0.2.5:
+[Bug] Root not working properly (regression from 0.2.3 to 0.2.4). Fixed.
+[New] Feature] Added a basic build.prop editor.
+
+* 0.2.4:
+[Bug] Clean (root needed) task bug resolved. A new button "Ask Root Perms" has been added
+      to be sure the flashtool has root accesses. All task which need root access are disabled
+      while this Ask Root task is not complete.
+[New] Firmwares have to come bundled in one file named with a ftf extension
+      (ftf for Flash Tool Firmware). A Create Bundle feature has been added to the tool to create
+      your own firmware bundles. (So no need to Redownload a firmware you already have. Just bundle it).
+      This way it will be easier to package / distribute / integrate firmwares as they come out.
+
+* 0.2.3:
+[Bug] SEUS decrypt fixed
+[New] Wipe Userdata is set to default YES</pre>
+	</td></tr>
+		</table>
+	</div>
+</div>
+<script>setupAllTabs();</script>
+</body>
+</html>
