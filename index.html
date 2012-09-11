@@ -20,8 +20,8 @@
 <table border=0 cellpadding=0 cellspacing=3 width=600>
     <tr>
         <td valign=top rowspan=2>
-        <h1>Flashtool v0.9.3.0</h1>
-        (Updated on 06/09/2012)<br>
+        <h1>Flashtool v0.9.4.0</h1>
+        (Updated on 10/09/2012)<br>
         &copy;2011 by Androxyde<br><br>
         </td>
         <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
@@ -69,9 +69,9 @@
         <tr><td>
 To install the Flashtool, follow the steps below:
 <ol> Windows version :
-    <li>Install the full install Flashtool 0.9.2.0 package<br>
+    <li>Install the full install Flashtool 0.9.4.0 package<br>
     <li>Apply the latest update (each update is cumulative)<br>
-    Updates will not be functionnal if full 0.9.2.0 is not installed<br>
+    Updates will not be functionnal if full 0.9.4.0 is not installed<br>
 </ol>
 <ol> Linux version :
     <li>Unpack the tar.7z package<br>
@@ -79,18 +79,14 @@ To install the Flashtool, follow the steps below:
     <li>Add these rules to /etc/udev : <br>
         SUBSYSTEM=="usb", ACTION=="add", SYSFS{idVendor}=="0fce", SYSFS{idProduct}=="*", MODE="0777"<br>
     <li>Apply the latest update (each update is cumulative)<br>
-    Updates will not be functionnal if full 0.9.2.0 is not installed<br>
+    Updates will not be functionnal if full 0.9.4.0 is not installed<br>
 </ol>
         </td></tr>
         <tr><td>
         <dl>
             <dt>Full install :
-            <ol> Windows Edition - v0.9.3.0 (MD5 : A9FDD4884573473624612C8FA3BE9DD3)</ol>
-            <ol><ol><a href="http://ul.to/kojojr4q" target="_new">uploaded.to</a></ol></ol>
-            <ol><ol><a href="http://rapidgator.net/file/39904691/flashtool-0.9.3.0-windows.exe.html" target="_new">rapidgator</a></ol></ol>
-            <ol> Linux Edition - v0.9.3.0 (MD5 : E5E2A6878D61DC50D5204F791E600E4C)</ol>
-            <ol><ol><a href="http://ul.to/f1ocofv3" target="_new">uploaded.to</a></ol></ol>
-            <ol><ol><a href="http://rapidgator.net/file/39906791/flashtool-0.9.3.0-linux.tar.7z.html" target="_new">rapidgator</a></ol></ol>            
+            <ol> Windows Edition - v0.9.4.0 (MD5 : B865E78CD6E77F33E8C03A754FE244AC)</ol>
+            <ol><ol><a href="http://ul.to/5qpocg9i" target="_new">uploaded.to</a></ol></ol>
         </dl>
         </td></tr>
         </table>
@@ -158,6 +154,14 @@ and questions I get from people using Flashtool.
         <tr><td>
 <pre>
 <hr>
+* 0.9.4.0
+- ROM cleaner is now working. cleaner profiles as well as apps_saved are inside a device specific folder
+  ie for LT26 device : [Flashtool]/custom/clean/L26 and [Flashtool]/custom/apps_saved/L26
+- Added the Emulator root exploit used on LT15/LT18 ICS 4.0.3 to root it
+- When trying to force root, FT checks if device is already rooted and warn about it
+- When trying to force root, better error handling with explicit message when exploit does not work
+- Clicking on the root button in the toolbar warn if not root exploit available for the version you have
+ 
 * 0.9.3.0
 - Added ability to remove a device
 - Added ability to export a device (for LT26 for example, it will be exported to LT26.ftd inside the devices folder)
