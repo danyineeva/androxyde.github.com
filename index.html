@@ -20,8 +20,8 @@
 <table border=0 cellpadding=0 cellspacing=3 width=600>
     <tr>
         <td valign=top rowspan=2>
-        <h1>Flashtool v0.9.5.0</h1>
-        (Updated on 12/09/2012)<br>
+        <h1>Flashtool v0.9.6.0</h1>
+        (Updated on 18/09/2012)<br>
         &copy;2011 by Androxyde<br><br>
         </td>
         <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
@@ -69,9 +69,9 @@
         <tr><td>
 To install the Flashtool, follow the steps below:
 <ol> Windows version :
-    <li>Install the full install Flashtool 0.9.5.0 package<br>
+    <li>Install the full install Flashtool 0.9.6.0 package<br>
     <li>Apply the latest update (each update is cumulative)<br>
-    Updates will not be functionnal if full 0.9.5.0 is not installed<br>
+    Updates will not be functionnal if full 0.9.6.0 is not installed<br>
 </ol>
 <ol> Linux version :
     <li>Unpack the tar.7z package<br>
@@ -79,19 +79,16 @@ To install the Flashtool, follow the steps below:
     <li>Add these rules to /etc/udev : <br>
         SUBSYSTEM=="usb", ACTION=="add", SYSFS{idVendor}=="0fce", SYSFS{idProduct}=="*", MODE="0777"<br>
     <li>Apply the latest update (each update is cumulative)<br>
-    Updates will not be functionnal if full 0.9.5.0 is not installed<br>
+    Updates will not be functionnal if full 0.9.6.0 is not installed<br>
 </ol>
         </td></tr>
         <tr><td>
         <dl>
             <dt>Full install :
-            <ol> Windows Edition - v0.9.5.0 (MD5 : 99F1CBA6D7E10DC4F1486D69E718A310)</ol>
-            <ol><ol><a href="http://ul.to/tpiipaod" target="_new">uploaded.to</a></ol></ol>
-            <ol><ol><a href="http://hotfile.com/dl/171826338/bc43648/flashtool-0.9.5.0-windows.exe.html" target="_new">hotfile</a></ol></ol>
-            <ol><ol><a href="http://rapidgator.net/file/41573524/flashtool-0.9.5.0-windows.exe.html" target="_new">rapidgator</a></ol></ol>                        
-            <ol> Linux Edition - v0.9.5.0 (MD5 : 4D030D9451E9076F9192AAB6A80CAAA6)</ol>
-            <ol><ol><a href="http://ul.to/a3dv8wo7" target="_new">uploaded.to</a></ol></ol>
-            <ol><ol><a href="http://rapidgator.net/file/41570618/flashtool-0.9.5.0-linux.tar.7z.html" target="_new">rapidgator</a></ol></ol>
+            <ol> Windows Edition - v0.9.6.0 (MD5 : 1425C005E362C5B441775FC0B2FF7533)</ol>
+            <ol><ol><a href="http://ul.to/jhyoa37d" target="_new">uploaded.to</a></ol></ol>
+            <ol> Linux Edition - v0.9.6.0 (MD5 : D806109D1066221D6A7C21F8F1EFCF20)</ol>
+            <ol><ol><a href="http://ul.to/wi57bnbv" target="_new">uploaded.to</a></ol></ol>
         </dl>
         </td></tr>
         </table>
@@ -159,6 +156,11 @@ and questions I get from people using Flashtool.
         <tr><td>
 <pre>
 <hr>
+* 0.9.6.0
+- Resolved an issue introduced in 0.9.1 in Sin Editor (Dump data). Didn't work anymore for yaffs2 images
+- Added Xperia SL and Xperia TX drivers to driver package
+- Added new root method (AdbRestore hack using Semc backup and restore tool. Working for LT26 but maybe for others too)
+
 * 0.9.5.0
 - Added background version checker
 - Added Xperia SX device
