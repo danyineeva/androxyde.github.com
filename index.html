@@ -83,12 +83,13 @@ To install the Flashtool, follow the steps below:
 </ol>
 <ol> Mac version :
     <li>Unpack the tar.gz package<br>
-    <li>Check that libusb-1.0 is installed
-    Here is a sample with macport :
-    - sudo port install libusb
-    - ls -al /opt/local/lib/libusb-1.0.dylib (if file is there, then libusb is installed on your system)
-    <li>Set LD_LIBRARY_PATH:
-    - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/local/lib
+    <li>Check that libusb-1.0 is installed.<br>
+    Here is a sample with macports :<br>
+    - sudo port install libusb<br>
+    if you have standard configuration of macports libusb is installed /opt/local/lib/ look for it:<br>
+    - ls -la /opt/local/lib/libusb-1.0.dylib (if file is there, then libusb is installed on your system)<br>
+    <li>Set LD_LIBRARY_PATH:<br>
+    - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/local/lib (change the path to the one where libusb is installed)
     <li>Apply the latest update (each update is cumulative)<br>
     Updates will not be functionnal if full 0.9.7.0 is not installed<br>    
 </ol>
