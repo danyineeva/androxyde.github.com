@@ -20,8 +20,8 @@
 <table border=0 cellpadding=0 cellspacing=3 width=600>
     <tr>
         <td valign=top rowspan=2>
-        <h1>Flashtool v0.9.6.0</h1>
-        (Updated on 18/09/2012)<br>
+        <h1>Flashtool v0.9.7.0</h1>
+        (Updated on 28/09/2012)<br>
         &copy;2011 by Androxyde<br><br>
         </td>
         <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
@@ -69,9 +69,9 @@
         <tr><td>
 To install the Flashtool, follow the steps below:
 <ol> Windows version :
-    <li>Install the full install Flashtool 0.9.6.0 package<br>
+    <li>Install the full install Flashtool 0.9.7.0 package<br>
     <li>Apply the latest update (each update is cumulative)<br>
-    Updates will not be functionnal if full 0.9.6.0 is not installed<br>
+    Updates will not be functionnal if full 0.9.7.0 is not installed<br>
 </ol>
 <ol> Linux version :
     <li>Unpack the tar.7z package<br>
@@ -79,7 +79,7 @@ To install the Flashtool, follow the steps below:
     <li>Add these rules to /etc/udev : <br>
         SUBSYSTEM=="usb", ACTION=="add", SYSFS{idVendor}=="0fce", SYSFS{idProduct}=="*", MODE="0777"<br>
     <li>Apply the latest update (each update is cumulative)<br>
-    Updates will not be functionnal if full 0.9.6.0 is not installed<br>
+    Updates will not be functionnal if full 0.9.7.0 is not installed<br>
 </ol>
         </td></tr>
         <tr><td>
@@ -156,6 +156,17 @@ and questions I get from people using Flashtool.
         <tr><td>
 <pre>
 <hr>
+* 0.9.7.0
+- Improved ELF extractor. Now prints load address of each program (useful for kernel builders)
+- Added Yaffs extractor.
+- Improved rooting devices by give the choice of the SU package to install
+- Added an unroot option
+- Added Xperia T to list of devices
+- Cleaned fastboot drivers (still does not install on W8)
+- Encoded zergrush and psneuter to fool antivirus
+- FlashTool linux runscript is now compatible with MacOS (MacOS package will come soon)
+- Better sin content identification (was not working for Xperia T system.sin)
+
 * 0.9.6.0
 - Resolved an issue introduced in 0.9.1 in Sin Editor (Dump data). Didn't work anymore for yaffs2 images
 - Added Xperia SL and Xperia TX drivers to driver package
