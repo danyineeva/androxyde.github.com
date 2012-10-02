@@ -175,6 +175,12 @@ and questions I get from people using Flashtool.
         <tr><td>
 <pre>
 <hr>
+* 0.9.8
+- Resolved major bug. 0.9.7 broke flashing. amss_1_fs failed to flash on devices containing this file in their bundles
+- Emulator root hack was not taking care of superuser package choose
+- Zergrush root exploit was not working in 0.9.7
+- Unroot works better (better superuser package deletion)
+
 * 0.9.7.0
 - Improved ELF extractor. Now prints load address of each program (useful for kernel builders)
 - Added Yaffs extractor.
