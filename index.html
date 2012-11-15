@@ -176,6 +176,24 @@ and questions I get from people using Flashtool.
         <tr><td>
 <pre>
 <hr>
+* 0.9.10 (not released yet)
+- Updated SuperSU to 0.98
+- Updated translation system to almost all application frames (from there, people who want to contribute
+  translation will be able to.
+- Added a root package manager to easily reference and then choose which root package to install when
+  rooting device.
+- Reworked menus to be more clear (too much things into Tools menu)
+
+* 0.9.9
+- Solved libusb bug for some devices under linux and mac.
+  Libusbx is now used instead of libusb (http://www.libusbx.org)
+  libusbx is a more active fork of libusb. libusb libs can be replaced by libusbx libs on the system.
+  Flashtool embeds prebuilt libusbx libs into x10flasher_lib/mac|linux/lib32&lib64
+- Updated busybox to 1.20.0 as default one when rooting a device.
+- Updated SuperSU to 0.97
+- updated adb and fastboot for mac for adb restore root trick.
+- Updated jre to 1.7u9 for linux and windows.
+
 * 0.9.8
 - Resolved major bug. 0.9.7 broke flashing. amss_1_fs failed to flash on devices containing this file in their bundles
 - Emulator root hack was not taking care of superuser package choose
