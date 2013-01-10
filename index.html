@@ -174,13 +174,27 @@ and questions I get from people using Flashtool.
         <tr><td>
 <pre>
 <hr>
-* 0.9.10 (not released yet)
-- Updated SuperSU to 0.98
-- Updated translation system to almost all application frames (from there, people who want to contribute
+* 0.9.10.1
+- Resolved a serious bug leading to a softbrick (reported on LT26 devices)
+
+* 0.9.10
+- Updated SuperSU to 0.99
+- Updated translation system to almost all application frames (from there, people who want to contribute to
   translation will be able to.
-- Added a root package manager to easily reference and then choose which root package to install when
-  rooting device.
 - Reworked menus to be more clear (too much things into Tools menu)
+- Update java to jre7u10 for both windows and linux
+- Device editor can now deal with loaders for setool unlocked / modded phones (unlocked loader)
+- When flashing, better loader detection that will prevent flashing of modded phones to fail with a verification header
+  failure. For such phones, unlocked loader must be included in the device settings. One is included for R800 devices
+  and is probably the same for all 2011 devices (tested only with R800 device ... thanks nickholtus and alejandrissimo)
+- No more application hang when flashing with debug mode on. Better debug output (more helpfull)
+- Reworked a little sin parser to better detect sin header size
+- Flashing session is now closer to what SEUS or PCCompanion do.
+- Mac release now bundled as an App inside a dmg
+- Application look and feel is back to System look and feel. So reworked UI composition to look fine on all platforms.
+  Did that to have Flashtool menu appearing in the shared menubar on MacOS
+- Resolved issues with 0.9.9 libusbx stuff under linux and tools not working (rooting for example) under windows.
+  Everything should be fine now.
 
 * 0.9.9
 - Solved libusb bug for some devices under linux and mac.
