@@ -171,6 +171,27 @@ and questions I get from people using Flashtool.
         <tr><td>
 <pre>
 <hr>
+* 0.9.11
+- This version is a big split with every previous ones. And not fully featured as previous can be.
+  I changed the UI framework from Swing to SWT because of a better integration with Mac UI.
+  Here is what is missing from previous releases :
+     - No multilingual UI
+     - No recovery installer
+     - No kernel installer (for 2010 devices)
+     - No ROM cleaner.
+     - Cannot Add/Edit/Remove devices.
+     - No TA hex editor (in pro mode)
+- Version fully compatible with all 2013 devices (Z/ZL/Tablet Z etc etc)
+- Unified Bootloader unlock feature with the new BLU icon. No more unlock plugin.
+  As for flashing, BLU is available even without any connected device, even with
+  unrecognized devices.
+- Updated SuperSU package. Added servicemnu root hack (works with Z/ZL for all FW up  to .434)
+  Known working for Xperia T/V too
+- Added TA partition backup/restore. Using this feature, you can backup TA before unlock. Restore TA
+  will relock the devicee and get DRM back as well as BE2 (full complete relock). You cannot count
+  on this feature if ever your device is already unlocked. Missuse of this feature can brick the device.
+  Check XDA thread for more infos : http://forum.xda-developers.com/showthread.php?t=2292598
+  
 * 0.9.10.1
 - Resolved a serious bug leading to a softbrick (reported on LT26 devices)
 - Added a more complete german translation (thanks papayayoghurt)
